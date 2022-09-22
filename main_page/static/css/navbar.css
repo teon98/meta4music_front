@@ -1,36 +1,118 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+/* NotoSans KR import  */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
 .nav{
-    background-color: white;
-    display:flex;
+    font-family: 'Nanum Gothic', sans-serif;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px 10%;
-    font-family: 'Open Sans', sans-serif;
-    position: fixed;
-    left:0;
-    right:0;
 }
 
 .nav-logo{
-    color: black;
-    font-weight: 800;
-    font-size: 1.25rem;
+    color: #F45866;
+    font-weight: 700;
+    font-size: 20px;
     cursor: pointer;
 }
+
+.nav-ul{
+    display: flex;
+}
+
 .nav-item{
-    color: rgba(0, 0, 0, 0.55);
+    padding: 0px 30px;
     display: inline-block;
-    padding: 0px 20px;
-    font-weight: 0.75rem;
-    font-weight: 800;
     cursor: pointer;
 }
 
-.nav-item a{
-    transition: all 0.3s ease 0s;
+.nav-item a {
+    font-weight: 500;
+    color: #F45866;
+    font-size: 16px;
 }
 
-.nav-item:hover{
-    color:black;
+.spread-underline {
+    color: #333;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 0;
+    position: relative;
+  }
+
+  .spread-underline:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #F45866;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .spread-underline:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+
+  .button {
+    background: #69BBBD;
+    width : 120px;
+    overflow: hidden;
+    text-align : center;
+    transition : .2s;
+    cursor : pointer;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .btnTwo {
+    position : relative;
+    width : 180px;
+    height : 100px;
+    margin-top: -100px;
+    padding-top: 2px;
+    background : #467C7D;
+    left : -200px;
+    transition : .3s;
+    top: 20px;
+  }
+  .btnText {
+    color : white;
+    transition : .3s;
+    font-weight: 600;
+  }
+  .btnText2 {
+    margin-top : 63px;
+    margin-right : -130px;
+    color : #FFF;
+    font-weight: 600;
+  }
+  .button:hover .btnTwo{ /*When hovering over .button change .btnTwo*/
+    left: -130px;
+  }
+  .button:hover .btnText{ /*When hovering over .button change .btnText*/
+    margin-left : 50px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .nav{
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .nav-ul{
+        align-items: flex-end;
+        flex-direction: column;
+        margin: 10px 0px;
+    }
+
+    .nav-item{
+        padding: 7px 0px;
+    }
 }
